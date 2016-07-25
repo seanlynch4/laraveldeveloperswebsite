@@ -5829,7 +5829,7 @@ header {
   text-align: center;
   height: 100px;
   margin-top: 15px; }
-  header img {
+  header .mobile-header-img {
     float: left;
     margin-left: 15px; }
   header .menu {
@@ -5840,44 +5840,36 @@ header {
     font-family: "Open Sans";
     font-size: 20px;
     font-weight: 400; }
+  header .full-screen-nav {
+    display: none; }
 
 .clear {
   clear: both; }
 
 .first-section {
   text-align: center; }
-  .first-section h1 {
+  .first-section .container h1 {
     color: #181717;
     font-family: "Open Sans";
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 700;
     letter-spacing: 0.92px;
     line-height: 33px; }
-  .first-section h3 {
+  .first-section .container h3 {
     color: #181717;
     font-family: "Open Sans";
     font-size: 15px;
     letter-spacing: 0.5px;
     line-height: 18px;
     font-weight: 400; }
-  .first-section .btn {
-    margin-top: 22px;
-    color: white;
-    font-family: "Open Sans";
-    font-size: 18px;
-    font-weight: 600;
-    letter-spacing: 0.69px;
-    line-height: 24px;
-    background-color: #df4f46;
-    border: 5px solid #df4f46;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); }
 
 .second-section {
+  z-index: -1;
   position: relative;
-  top: -25px;
+  top: -80px;
   width: 100%;
-  background-image: url(../images/background.png);
-  background-position: 50%;
+  background-image: url(../images/group.png);
+  background-position: 40%;
   background-size: cover;
   padding-top: 200px;
   padding-bottom: 40px; }
@@ -5894,7 +5886,6 @@ header {
 .third-section {
   background: white; }
   .third-section p {
-    margin-top: 30px;
     margin-bottom: 40px;
     color: #db3a2c;
     font-family: "Open Sans";
@@ -5907,7 +5898,7 @@ header {
     max-width: 500px;
     margin: 0 auto;
     width: 90%;
-    border-top: 10px solid #db3a2c;
+    border-top: #db3a2c;
     margin-top: 80px;
     margin-bottom: 150px;
     text-align: center;
@@ -5958,7 +5949,19 @@ header {
     line-height: 20px;
     /* Text style for "Agencies" */
     /* Text style for "can come t" */
-    font-weight: 400; }
+    font-weight: 400;
+    margin-bottom: 15px; }
+  .fourth-section .btn {
+    margin-left: 15px;
+    color: white;
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.69px;
+    line-height: 24px;
+    background-color: #df4f46;
+    border: #df4f46;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); }
   .fourth-section p:last-child {
     margin-bottom: 50px; }
   .fourth-section p span {
@@ -5966,7 +5969,8 @@ header {
 
 .fifth-section {
   background-color: white;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 50px; }
   .fifth-section h3 {
     margin-top: 50px;
     color: black;
@@ -5974,35 +5978,98 @@ header {
     font-size: 20px;
     font-weight: 400;
     line-height: 23px; }
-  .fifth-section img:last-child {
+  .fifth-section .trainees-img {
+    padding-top: 25px;
+    width: 245px;
+    margin: 0 auto; }
+  .fifth-section .trainees-img .first-img {
+    margin-bottom: 50px; }
+  .fifth-section .trainees-img .last-img {
+    -ms-flex-line-pack: center;
+    align-content: center;
+    margin: 0 auto; }
+  .fifth-section .trainees-img .center-img {
     margin-bottom: 50px; }
 
 footer {
-  height: 45px;
+  height: 100px;
   background-color: #db3a2c; }
   footer p {
     margin-left: 10px;
-    padding-top: 15px;
+    padding-top: 45px;
     color: white;
     font-family: "Open Sans";
     font-size: 15px;
     font-weight: 400;
     line-height: 17px; }
 
-@media (min-width: 420px) {
+/* Extra Small Devices, Phones*/
+@media (min-width: 480px) {
   .second-section {
-    position: relative;
-    top: -50px;
-    width: 100%;
-    background-image: url(../images/background.png);
-    background-position: 50%;
-    background-size: cover;
-    padding-top: 550px;
-    padding-bottom: 40px; }
+    top: -80px;
+    background-position: 20%;
+    padding-top: 600px;
+    padding-bottom: 0px; }
     .second-section p {
-      margin-top: -100px;
-      font-size: 26px;
+      margin-top: -200px;
+      font-size: 22px;
       font-weight: 400;
-      line-height: 49px; } }
+      line-height: 26px; } }
+
+/* Small Devices, Tablets */
+@media (min-width: 768px) {
+  header .mobile-header-img {
+    display: none; }
+  header .menu {
+    display: none; }
+  header .full-screen-nav {
+    margin: 0 auto;
+    display: inline-block;
+    list-style-type: none; }
+    header .full-screen-nav li {
+      padding: 0 15px;
+      -ms-flex-line-pack: center;
+      align-content: center;
+      text-align: center;
+      display: inline-block; }
+    header .full-screen-nav a {
+      display: block;
+      text-decoration: none;
+      color: #181717;
+      font-family: "Open Sans";
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.69px;
+      line-height: 24px; }
+    header .full-screen-nav a:hover {
+      color: #db3a2c; }
+    header .full-screen-nav img {
+      padding-left: 50px;
+      padding-right: 50px; }
+  .first-section {
+    margin-top: 70px; } }
+
+/* Medium Devices, Desktops */
+@media (min-width: 992px) {
+  header .full-screen-nav li {
+    padding: 0 20px; }
+  header .full-screen-nav img {
+    padding-left: 60px;
+    padding-right: 60px; } }
+
+/* Large Devices, Wide Screens */
+@media (min-width: 1200px) {
+  header .full-screen-nav li {
+    padding: 0 0px; }
+  header .full-screen-nav img {
+    padding-left: 90px;
+    padding-right: 90px; }
+  .second-section {
+    top: -120px;
+    background-position: 0px 0px;
+    padding-top: 477px;
+    padding-bottom: 100px; }
+    .second-section p {
+      padding-top: 300px; } }
 
 /*# sourceMappingURL=app.css.map */

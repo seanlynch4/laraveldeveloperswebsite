@@ -2,8 +2,13 @@
 
 
 
-
-$red: #dd4439;
+$red1: #db3a2c;
+$red2: #dd4439;
+$button-red: #df4f46;
+$button-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+$box-grey: #737474;
+$background-grey: #494949;
+$black-font: #181717;
 
 * {
   -webkit-box-sizing: border-box;
@@ -58,7 +63,7 @@ header
   margin-top: 15px;
 
 
-  img
+  .mobile-header-img
   {
     float: left;
     margin-left: 15px;
@@ -69,12 +74,16 @@ header
     cursor: pointer;
     float: right;
     margin-right: 15px;
-    color: #181717;
+    color: $black-font;
     font-family: "Open Sans";
     font-size: 20px;
     font-weight: 400;
   }
 
+  .full-screen-nav
+  {
+    display: none;
+  }
 
 }
 
@@ -87,45 +96,27 @@ header
 {
   text-align: center;
 
-  h1
+  .container
   {
-    color: #181717;
-    font-family: "Open Sans";
-    font-size: 24px;
-    font-weight: 700;
-    letter-spacing: 0.92px;
-    line-height: 33px;
+
+    h1 {
+         color: $black-font;
+         font-family: "Open Sans";
+         font-size: 28px;
+         font-weight: 700;
+         letter-spacing: 0.92px;
+         line-height: 33px;
+       }
+
+    h3 {
+      color: $black-font;
+      font-family: "Open Sans";
+      font-size: 15px;
+      letter-spacing: 0.5px;
+      line-height: 18px;
+      font-weight: 400;
   }
-
-  h3
-  {
-    color: #181717;
-    font-family: "Open Sans";
-    font-size: 15px;
-    letter-spacing: 0.5px;
-    line-height: 18px;
-    font-weight: 400;
-  }
-
-
-  .btn
-  {
-    margin-top: 22px;
-    color: white;
-    font-family: "Open Sans";
-    font-size: 18px;
-    font-weight: 600;
-    letter-spacing: 0.69px;
-    line-height: 24px;
-    background-color: #df4f46;
-    border: 5px solid #df4f46;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  }
-
-
-
-
-
+}
 
 }
 
@@ -133,11 +124,12 @@ header
 
 .second-section
 {
+  z-index: -1;
   position: relative;
-  top: -25px;
+  top: -80px;
   width: 100%;
-  background-image: url(../images/background.png);
-  background-position: 50%;
+  background-image: url(../images/group.png);
+  background-position: 40%;
   background-size: cover;
   padding-top: 200px;
   padding-bottom: 40px;
@@ -164,9 +156,8 @@ header
 
 
   p{
-    margin-top: 30px;
     margin-bottom: 40px;
-    color: #db3a2c;
+    color: $red1;
     font-family: "Open Sans";
     font-size: 30px;
     font-weight: 400;
@@ -186,11 +177,11 @@ header
       max-width: 500px;
       margin: 0 auto;
       width: 90%;
-      border-top: 10px solid #db3a2c;
+      border-top: $red1;
       margin-top: 80px;
       margin-bottom: 150px;
       text-align: center;
-      background-color: #737474;
+      background-color: $box-grey;
 
       :first-child
       {
@@ -241,7 +232,7 @@ header
 .fourth-section
 {
   margin-top: 10px;
-  background-color: #494949;
+  background-color: $background-grey;
 
   h3
   {
@@ -265,9 +256,23 @@ header
     /* Text style for "Agencies" */
     /* Text style for "can come t" */
     font-weight: 400;
+    margin-bottom: 15px;
 
   }
 
+  .btn
+  {
+    margin-left: 15px;
+    color: white;
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.69px;
+    line-height: 24px;
+    background-color: $button-red;
+    border: $button-red;
+    box-shadow: $button-shadow;
+  }
 
   p:last-child
   {
@@ -284,6 +289,7 @@ header
 .fifth-section {
   background-color: white;
   text-align: center;
+  margin-bottom: 50px;
 
   h3 {
 
@@ -295,22 +301,45 @@ header
     line-height: 23px;
   }
 
-  img:last-child
+  .trainees-img
+  {
+    padding-top: 25px;
+    width: 245px;
+    margin: 0 auto;
+  }
+
+  .trainees-img .first-img
+  {
+
+    margin-bottom: 50px;
+
+  }
+
+  .trainees-img .last-img
+  {
+    align-content: center;
+    margin: 0 auto;
+
+
+  }
+
+  .trainees-img .center-img
   {
     margin-bottom: 50px;
   }
+
 
 }
 
 footer
 {
-  height: 45px;
-  background-color: #db3a2c;
+  height: 100px;
+  background-color: $red1;
 
   p
   {
     margin-left: 10px;
-    padding-top: 15px;
+    padding-top: 45px;
     color: white;
     font-family: "Open Sans";
     font-size: 15px;
@@ -319,27 +348,143 @@ footer
   }
 }
 
-
-@media (min-width: 420px) {
+/* Extra Small Devices, Phones*/
+@media (min-width: 480px)
+{
   .second-section
   {
-    position: relative;
-    top: -50px;
-    width: 100%;
-    background-image: url(../images/background.png);
-    background-position: 50%;
-    background-size: cover;
-    padding-top: 550px;
-    padding-bottom: 40px;
-
+    top: -80px;
+    background-position: 20%;
+    padding-top: 600px;
+    padding-bottom: 0px;
 
 
     p
     {
-      margin-top: -100px;
-      font-size: 26px;
+      margin-top: -200px;
+      font-size: 22px;
       font-weight: 400;
-      line-height: 49px;
+      line-height: 26px;
+    }
+  }
+}
+
+
+/* Small Devices, Tablets */
+@media (min-width : 768px)
+{
+  header
+  {
+    .mobile-header-img
+    {
+      display: none;
+    }
+    .menu
+    {
+      display: none;
+    }
+
+    .full-screen-nav {
+      margin: 0 auto;
+      display: inline-block;
+      list-style-type: none;
+
+      li {
+        padding: 0 15px;
+        align-content: center;
+        text-align: center;
+        display: inline-block;
+      }
+
+      a {
+        display: block;
+        text-decoration: none;
+        color: #181717;
+        font-family: "Open Sans";
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0.69px;
+        line-height: 24px;
+      }
+
+      a:hover {
+        color: $red1;
+      }
+
+      img
+      {
+
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+
+    }
+  }
+
+  .first-section
+  {
+    margin-top: 70px;
+  }
+
+  .second-section
+  {
+
+  }
+}
+
+/* Medium Devices, Desktops */
+@media (min-width : 992px)
+{
+
+  header
+  {
+    .full-screen-nav
+    {
+      li
+      {
+        padding: 0 20px;
+      }
+
+      img
+      {
+        padding-left: 60px;
+        padding-right: 60px;
+      }
+    }
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media (min-width : 1200px) {
+
+  header {
+
+    .full-screen-nav
+    {
+      li
+      {
+        padding: 0 0px;
+      }
+
+      img
+      {
+
+        padding-left: 90px;
+        padding-right: 90px;
+      }
+    }
+  }
+
+  .second-section
+  {
+    top: -120px;
+    background-position: 0px 0px;
+    padding-top: 477px;
+    padding-bottom: 100px;
+
+    p
+    {
+      padding-top: 300px;
     }
   }
 }

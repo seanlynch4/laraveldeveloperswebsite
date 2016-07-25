@@ -15,10 +15,8 @@
 
 <header>
     <a href="index.html">
-            <img src="images/laravel-training-logo.png" />
+            <img class="mobile-header-img" src="images/laravel-training-logo.png" />
     </a>
-
-
 
     <div id="myNav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
@@ -42,14 +40,23 @@
             document.getElementById("myNav").style.height = "0%";
         }
     </script>
+
+
+    <nav class="full-screen-nav">
+        <li><a href="#">Who We Are</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#"><img src="images/laravel-training-logo-full.png"/></a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Contact Us</a></li>
+    </nav>
+
 </header>
 
 
 <section class="first-section">
     <div class="container">
-        <h1>WE. ARE. LARAVEL.</h1>
-        <h3>We are best for laravel training in the UK</h3>
-        <a class="btn btn-default" href="#" role="button">Book Now</a>
+        <h1>Looking For Laravel Training?</h1>
+        <h3>You’ve come to the right place</h3>
     </div>
 </section>
 
@@ -97,9 +104,9 @@
             <h3>Who is our training for?</h3>
         </div>
         <div class="section-content">
-            <p><span>Individuals</span> who want to learn laravel</p>
-            <p><span>Teams</span> can come to us or have a private course at thier workplace</p>
-            <p><span>Agencies</span> can come to us or have a private course at thier workplace</p>
+            <p><span>Individuals</span> who want to learn laravel.</p>
+            <p><span>Teams</span> can come to us or have a private course at thier workplace.</p>
+            <p><span>Agencies</span> can come to us or have a private course at their workplace.</p>
             <p>Interested? <a class="btn btn-default" href="#" role="button">Get In Touch</a></p>
         </div>
     </div>
@@ -111,15 +118,15 @@
        <h3>Our Trainers are trusted by businesses of all sizes, worldwide</h3>
 
        <div class="trainees-img">
-           <img src="images/NHS.png" />
-           <img src="images/YPS.png" />
-           <img src="images/YBO.png" />
+           <img src="images/NHS.png" class="first-img"/>
+           <img src="images/YPS.png" class="center-img"/>
+           <img src="images/YBO.png" class="last-img"/>
         </div>
    </div>
 </section>
 
 <footer>
-    <p>Laravel is a trademark owned by Taylor Otwell. We are not affiliated with Laravel or Taylor.</p>
+    <p>Netsells</p>
 </footer>
 </body>
 
