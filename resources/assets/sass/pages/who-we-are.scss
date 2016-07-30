@@ -1,0 +1,155 @@
+body.page-whoweare {
+
+  .whoweare-section-heading {
+    background-image: url(../images/whoweare-img.png);
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    z-index: -1;
+
+    .heading h1 {
+      text-align: center;
+      color: white;
+      font-family: "Open Sans";
+      font-size: 40px;
+      font-weight: 300;
+      line-height: 40px;
+      position: relative;
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+  }
+
+
+  .whoweare-section-main-description
+  {
+    background-color: $red1;
+    .container
+    {
+      padding: 50px 0;
+      width: 80%;
+      h3
+      {
+        text-align: center;
+        color: white;
+        font-family: "Open Sans";
+        font-size: 20px;
+        line-height: 23px;
+      }
+    }
+
+  }
+
+  .whoweare-section-whatwedo
+  {
+    padding: 50px 0;
+    background-color: $dark-grey-background-2;
+  }
+
+
+
+  .whoweare-section-trainers
+  {
+    margin: 0 auto;
+    padding: 50px 0;
+    background-color: white;
+
+    .container
+    {
+      width: 80%;
+
+      .box
+      {
+        margin-bottom: 50px;
+        text-align: center;
+
+        h1
+        {
+          font-size: 20px;
+          line-height: 23px;
+          font-weight: bold;
+        }
+
+        p
+        {
+
+          font-size: 15px;
+          line-height: 18px;
+
+
+          span
+          {
+            font-weight: bold;
+          }
+        }
+      ;
+
+      }
+
+    }
+
+  }
+
+
+  /* Small Devices, Tablets */
+  @media (min-width: 600px) {
+    .whoweare-section-heading {
+      .heading h1 {
+        padding-top: 150px;
+        padding-bottom: 125px;
+      }
+    }
+  }
+
+  /* Small Devices, Tablets */
+  @media (min-width: 768px) {
+    .whoweare-section-heading {
+      .heading h1 {
+        padding-top: 250px;
+        padding-bottom: 150px;
+      }
+    }
+  }
+
+  /* Medium Devices, Desktops */
+  @media (min-width: 992px) {
+    .whoweare-section-heading {
+      .heading h1 {
+        padding-top: 300px;
+        padding-bottom: 200px;
+      }
+    }
+  }
+
+  /* Large Devices, Wide Screens */
+  @media (min-width: 1200px) {
+    .whoweare-section-heading {
+      .heading h1 {
+        padding-top: 300px;
+        padding-bottom: 250px;
+      }
+    }
+  }
+
+  /* Large Devices, Wide Screens */
+  @media (min-width: 1500px) {
+    .whoweare-section-heading {
+      .heading h1 {
+        padding-top: 350px;
+        padding-bottom: 300px;
+      }
+    }
+  }
+
+  /* Large Devices, Wide Screens */
+  @media (min-width: 1900px) {
+    .whoweare-section-heading {
+      .heading h1 {
+        padding-top: 400px;
+        padding-bottom: 300px;
+      }
+    }
+  }
+
+}

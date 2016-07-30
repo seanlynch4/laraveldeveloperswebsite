@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
- * Bootstrap v3.3.6 (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
+ * Bootstrap v3.3.7 (http://getbootstrap.com)
+ * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -1073,7 +1073,6 @@ a {
     color: #23527c;
     text-decoration: underline; }
   a:focus {
-    outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
 
@@ -2285,7 +2284,6 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px; }
 
@@ -2790,7 +2788,6 @@ select[multiple].input-lg,
   -ms-user-select: none;
   user-select: none; }
   .btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
-    outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
   .btn:hover, .btn:focus, .btn.focus {
@@ -5734,6 +5731,106 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+* {
+  box-sizing: border-box; }
+
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.cf:after {
+  clear: both; }
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1; }
+
+.clear {
+  clear: both; }
+
+html, body {
+  padding: 0;
+  margin: 0; }
+
+header {
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999; }
+  header .mobile-header-img {
+    float: left;
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px; }
+  header .menu {
+    float: right;
+    margin-right: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    color: white;
+    font-family: "Open Sans";
+    font-size: 20px;
+    font-weight: 400; }
+  header .full-screen-nav {
+    padding-top: 15px;
+    display: none; }
+
+@media (min-width: 768px) {
+  header .mobile-header-img {
+    display: none; }
+  header .menu {
+    display: none; }
+  header .full-screen-nav {
+    display: inline-block; }
+    header .full-screen-nav ul {
+      font-size: 0px; }
+    header .full-screen-nav li {
+      width: 132px;
+      display: inline-block; }
+    header .full-screen-nav a {
+      text-decoration: none;
+      color: white;
+      font-family: "Open Sans";
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.69px;
+      line-height: 24px; }
+    header .full-screen-nav a:hover {
+      color: #db3a2c; } }
+
+/* Medium Devices, Desktops */
+@media (min-width: 992px) {
+  header .full-screen-nav li {
+    width: 150px; } }
+
+/* Large Devices, Wide Screens */
+@media (min-width: 1200px) {
+  header .full-screen-nav li {
+    width: 200px; } }
+
 .overlay {
   height: 0%;
   width: 100%;
@@ -5787,215 +5884,12 @@ button.close {
     top: 15px;
     right: 35px; } }
 
-* {
-  box-sizing: border-box; }
-
-*:before,
-*:after {
-  box-sizing: border-box; }
-
-/**
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    contenteditable attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that are clearfixed.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-.cf:before,
-.cf:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */ }
-
-.cf:after {
-  clear: both; }
-
-/**
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-.cf {
-  *zoom: 1; }
-
-html, body {
-  padding: 0;
-  margin: 0; }
-
-header {
-  width: 100%;
-  text-align: center;
-  height: 100px;
-  margin-top: 15px; }
-  header .mobile-header-img {
-    float: left;
-    margin-left: 15px; }
-  header .menu {
-    cursor: pointer;
-    float: right;
-    margin-right: 15px;
-    color: #181717;
-    font-family: "Open Sans";
-    font-size: 20px;
-    font-weight: 400; }
-  header .full-screen-nav {
-    display: none; }
-
-.clear {
-  clear: both; }
-
-.first-section {
-  text-align: center; }
-  .first-section .container h1 {
-    color: #181717;
-    font-family: "Open Sans";
-    font-size: 28px;
-    font-weight: 700;
-    letter-spacing: 0.92px;
-    line-height: 33px; }
-  .first-section .container h3 {
-    color: #181717;
-    font-family: "Open Sans";
-    font-size: 15px;
-    letter-spacing: 0.5px;
-    line-height: 18px;
-    font-weight: 400; }
-
-.second-section {
-  z-index: -1;
-  position: relative;
-  top: -80px;
-  width: 100%;
-  background-image: url(../images/group.png);
-  background-position: 40%;
-  background-size: cover;
-  padding-top: 200px;
-  padding-bottom: 40px; }
-  .second-section p {
-    text-align: center;
-    margin-left: 35px;
-    margin-right: 35px;
-    color: white;
-    font-family: 'Open Sans';
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 20px; }
-
-.third-section {
-  background: white; }
-  .third-section p {
-    margin-bottom: 40px;
-    color: #db3a2c;
-    font-family: "Open Sans";
-    font-size: 30px;
-    font-weight: 400;
-    letter-spacing: 1.84px;
-    line-height: 65px;
-    text-align: center; }
-  .third-section .container .box {
-    max-width: 500px;
-    margin: 0 auto;
-    width: 90%;
-    border-top: #db3a2c;
-    margin-top: 80px;
-    margin-bottom: 150px;
-    text-align: center;
-    background-color: #737474; }
-    .third-section .container .box :first-child {
-      margin-top: 100px;
-      margin-left: 0; }
-    .third-section .container .box :last-child {
-      margin-right: 0; }
-    .third-section .container .box h1 {
-      color: white;
-      font-family: "Open Sans";
-      font-size: 24px;
-      font-weight: 700;
-      line-height: 33px; }
-    .third-section .container .box p {
-      color: white;
-      font-family: "Open Sans";
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 20px;
-      padding-bottom: 25px;
-      padding-left: 15px;
-      padding-right: 15px; }
-    .third-section .container .box img {
-      display: inline-block;
-      margin: 0 auto;
-      position: relative;
-      top: -200px;
-      margin-bottom: -200px; }
-
-.fourth-section {
-  margin-top: 10px;
-  background-color: #494949; }
-  .fourth-section h3 {
-    text-align: center;
-    margin-top: 60px;
-    color: white;
-    font-family: "Open Sans";
-    font-size: 30px;
-    line-height: 65px;
-    font-weight: 400; }
-  .fourth-section p {
-    text-align: center;
-    color: white;
-    font-family: "Open Sans";
-    font-size: 20px;
-    line-height: 20px;
-    /* Text style for "Agencies" */
-    /* Text style for "can come t" */
-    font-weight: 400;
-    margin-bottom: 15px; }
-  .fourth-section .btn {
-    margin-left: 15px;
-    color: white;
-    font-family: "Open Sans";
-    font-size: 18px;
-    font-weight: 600;
-    letter-spacing: 0.69px;
-    line-height: 24px;
-    background-color: #df4f46;
-    border: #df4f46;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); }
-  .fourth-section p:last-child {
-    margin-bottom: 50px; }
-  .fourth-section p span {
-    font-weight: 700; }
-
-.fifth-section {
-  background-color: white;
-  text-align: center;
-  margin-bottom: 50px; }
-  .fifth-section h3 {
-    margin-top: 50px;
-    color: black;
-    font-family: "Open Sans";
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 23px; }
-  .fifth-section .trainees-img {
-    padding-top: 25px;
-    width: 245px;
-    margin: 0 auto; }
-  .fifth-section .trainees-img .first-img {
-    margin-bottom: 50px; }
-  .fifth-section .trainees-img .last-img {
-    -ms-flex-line-pack: center;
-    align-content: center;
-    margin: 0 auto; }
-  .fifth-section .trainees-img .center-img {
-    margin-bottom: 50px; }
-
 footer {
+  margin: 0 auto;
+  text-align: center;
   height: 100px;
   background-color: #db3a2c; }
   footer p {
-    margin-left: 10px;
     padding-top: 45px;
     color: white;
     font-family: "Open Sans";
@@ -6003,73 +5897,918 @@ footer {
     font-weight: 400;
     line-height: 17px; }
 
-/* Extra Small Devices, Phones*/
-@media (min-width: 480px) {
-  .second-section {
-    top: -80px;
-    background-position: 20%;
-    padding-top: 600px;
-    padding-bottom: 0px; }
-    .second-section p {
-      margin-top: -200px;
-      font-size: 22px;
-      font-weight: 400;
-      line-height: 26px; } }
+.btn {
+  margin-left: 15px;
+  color: white;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.69px;
+  line-height: 24px;
+  background-color: #df4f46;
+  border: #df4f46;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); }
+  .btn:hover {
+    background-color: white;
+    border: solid 3px #df4f46;
+    color: #df4f46; }
 
-/* Small Devices, Tablets */
-@media (min-width: 768px) {
-  header .mobile-header-img {
-    display: none; }
-  header .menu {
-    display: none; }
-  header .full-screen-nav {
-    margin: 0 auto;
-    display: inline-block;
-    list-style-type: none; }
-    header .full-screen-nav li {
-      padding: 0 15px;
-      -ms-flex-line-pack: center;
-      align-content: center;
-      text-align: center;
-      display: inline-block; }
-    header .full-screen-nav a {
-      display: block;
-      text-decoration: none;
+/*!
+ * jQuery UI Datepicker 1.12.0
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/datepicker/#theming
+ */
+.ui-datepicker {
+  margin: 0 auto;
+  width: 250px;
+  padding: .2em .2em 0;
+  display: none;
+  background-color: white; }
+
+.ui-datepicker .ui-datepicker-header {
+  padding-top: 50px;
+  position: relative;
+  padding: .2em 0;
+  color: #846e6e;
+  font-family: "Open Sans";
+  background-color: white;
+  border: none; }
+
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+  position: absolute;
+  top: 15px;
+  width: 1.8em;
+  height: 1.8em; }
+
+.ui-datepicker .ui-datepicker-prev-hover,
+.ui-datepicker .ui-datepicker-next-hover {
+  top: 1px; }
+
+.ui-datepicker .ui-datepicker-prev {
+  left: 2px; }
+
+.ui-datepicker .ui-datepicker-next {
+  right: 2px; }
+
+.ui-datepicker .ui-datepicker-prev-hover {
+  left: 1px; }
+
+.ui-datepicker .ui-datepicker-next-hover {
+  right: 1px; }
+
+.ui-datepicker .ui-datepicker-prev span {
+  background-image: url(../images/previous-month.png);
+  background-position: 0 0;
+  background-repeat: no-repeat; }
+
+.ui-datepicker .ui-datepicker-next span {
+  background-image: url(../images/next-month.png);
+  background-position: 0 0;
+  background-repeat: no-repeat; }
+
+.ui-datepicker .ui-datepicker-title {
+  color: #846e6e;
+  font-family: "Open Sans";
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 1.81px;
+  line-height: 18px;
+  padding-top: 15px;
+  padding-bottom: 15px; }
+
+.ui-datepicker .ui-datepicker-title select {
+  font-size: 1em;
+  margin: 1px 0; }
+
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+  width: 45%; }
+
+.ui-datepicker table {
+  width: 90%;
+  font-size: .9em;
+  border-collapse: collapse;
+  margin: 0 auto; }
+
+.ui-datepicker th {
+  padding: .7em .3em;
+  text-align: center;
+  font-weight: bold;
+  border: 0; }
+
+.ui-datepicker td {
+  border: 0;
+  padding: 1px; }
+
+.ui-datepicker td span,
+.ui-datepicker td a {
+  display: block;
+  padding: .2em;
+  text-align: right;
+  text-decoration: none; }
+
+.ui-datepicker .ui-datepicker-buttonpane {
+  background-image: none;
+  margin: .7em 0 0 0;
+  padding: 0 .2em;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0; }
+
+.ui-datepicker .ui-datepicker-buttonpane button {
+  float: right;
+  margin: .5em .2em .4em;
+  cursor: pointer;
+  padding: .2em .6em .3em .6em;
+  width: auto;
+  overflow: visible; }
+
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+  float: left; }
+
+/* with multiple calendars */
+.ui-datepicker.ui-datepicker-multi {
+  width: auto; }
+
+.ui-datepicker-multi .ui-datepicker-group {
+  float: left; }
+
+.ui-datepicker-multi .ui-datepicker-group table {
+  width: 95%;
+  margin: 0 auto .4em; }
+
+.ui-datepicker-multi-2 .ui-datepicker-group {
+  width: 50%; }
+
+.ui-datepicker-multi-3 .ui-datepicker-group {
+  width: 33.3%; }
+
+.ui-datepicker-multi-4 .ui-datepicker-group {
+  width: 25%; }
+
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
+  border-left-width: 0; }
+
+.ui-datepicker-multi .ui-datepicker-buttonpane {
+  clear: left; }
+
+.ui-datepicker-row-break {
+  clear: both;
+  width: 100%;
+  font-size: 0; }
+
+/* RTL support */
+.ui-datepicker-rtl {
+  direction: rtl; }
+
+.ui-datepicker-rtl .ui-datepicker-prev {
+  right: 2px;
+  left: auto; }
+
+.ui-datepicker-rtl .ui-datepicker-next {
+  left: 2px;
+  right: auto; }
+
+.ui-datepicker-rtl .ui-datepicker-prev:hover {
+  right: 1px;
+  left: auto; }
+
+.ui-datepicker-rtl .ui-datepicker-next:hover {
+  left: 1px;
+  right: auto; }
+
+.ui-datepicker-rtl .ui-datepicker-buttonpane {
+  clear: right; }
+
+.ui-datepicker-rtl .ui-datepicker-buttonpane button {
+  float: left; }
+
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current,
+.ui-datepicker-rtl .ui-datepicker-group {
+  float: right; }
+
+.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header,
+.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
+  border-right-width: 0;
+  border-left-width: 1px; }
+
+/* Icons */
+.ui-datepicker .ui-icon {
+  display: block;
+  text-indent: -99999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  left: .5em;
+  top: .3em; }
+
+.ui-state-default, .ui-widget-content .ui-state-default {
+  background-color: white;
+  border-color: white;
+  text-align: center; }
+
+.ui-state-default, .ui-widget-content .ui-state-hover {
+  border-color: red;
+  background-color: red;
+  color: white;
+  text-align: center; }
+
+.ui-state-default, .ui-widget-content .ui-state-active {
+  border-color: red;
+  border-radius: 50%;
+  font-size: 13px;
+  line-height: 23px;
+  background-color: red;
+  color: white;
+  text-align: center; }
+
+.ui-datepicker table {
+  width: 90%;
+  font-size: .9em;
+  border-collapse: collapse;
+  margin: 0 auto; }
+
+body.page-homepage {
+  /* Small Devices, Tablets */
+  /* Medium Devices, Desktops */
+  /* Large Devices, Wide Screens */ }
+  body.page-homepage header .menu {
+    color: #181717; }
+  body.page-homepage header .full-screen-nav a {
+    color: #181717; }
+  body.page-homepage .first-section {
+    padding-top: 100px;
+    text-align: center;
+    background-image: url(../images/right-background.png);
+    background-position: center 150px;
+    background-repeat: no-repeat;
+    background-size: cover; }
+    body.page-homepage .first-section .left-background-img {
+      height: 100%;
+      width: 100%;
+      background-image: url(../images/left-background.png);
+      background-position: left 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      z-index: -1;
+      top: 200px; }
+    body.page-homepage .first-section .headings h1 {
       color: #181717;
       font-family: "Open Sans";
-      font-size: 18px;
+      font-size: 28px;
       font-weight: 700;
-      letter-spacing: 0.69px;
-      line-height: 24px; }
-    header .full-screen-nav a:hover {
-      color: #db3a2c; }
-    header .full-screen-nav img {
-      padding-left: 50px;
-      padding-right: 50px; }
-  .first-section {
-    margin-top: 70px; } }
+      letter-spacing: 0.92px;
+      line-height: 33px; }
+    body.page-homepage .first-section .headings h3 {
+      color: #181717;
+      font-family: "Open Sans";
+      font-size: 15px;
+      letter-spacing: 0.5px;
+      line-height: 18px;
+      font-weight: 400; }
+    body.page-homepage .first-section .main-text {
+      color: white;
+      font-family: "Open Sans";
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 20px;
+      padding: 125px 0 50px; }
+  body.page-homepage .third-section {
+    background: white; }
+    body.page-homepage .third-section h1 {
+      color: #db3a2c;
+      font-family: "Open Sans";
+      font-size: 30px;
+      font-weight: 400;
+      letter-spacing: 1.84px;
+      line-height: 33px;
+      text-align: center; }
+    body.page-homepage .third-section .line {
+      margin: 0 auto;
+      width: 100px;
+      height: 2px;
+      border: 2px solid #737474;
+      margin-bottom: 50px; }
+    body.page-homepage .third-section .container .box {
+      max-width: 500px;
+      margin: 0 auto;
+      width: 90%;
+      border-top: #db3a2c;
+      margin-top: 80px;
+      margin-bottom: 150px;
+      text-align: center;
+      background-color: #737474; }
+      body.page-homepage .third-section .container .box :first-child {
+        margin-top: 100px;
+        margin-left: 0; }
+      body.page-homepage .third-section .container .box :last-child {
+        margin-right: 0; }
+      body.page-homepage .third-section .container .box h1 {
+        color: white;
+        font-family: "Open Sans";
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 33px; }
+      body.page-homepage .third-section .container .box p {
+        color: white;
+        font-family: "Open Sans";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        padding-bottom: 25px;
+        padding-left: 15px;
+        padding-right: 15px; }
+      body.page-homepage .third-section .container .box img {
+        display: inline-block;
+        margin: 0 auto;
+        position: relative;
+        top: -200px;
+        margin-bottom: -200px; }
+  body.page-homepage .fourth-section {
+    margin-top: 10px;
+    background-color: #494949; }
+    body.page-homepage .fourth-section h3 {
+      text-align: center;
+      margin-top: 60px;
+      color: white;
+      font-family: "Open Sans";
+      font-size: 30px;
+      line-height: 33px;
+      font-weight: 400; }
+    body.page-homepage .fourth-section .line {
+      margin: 0 auto;
+      width: 100px;
+      height: 2px;
+      border: 2px solid #db3a2c;
+      margin-bottom: 50px; }
+    body.page-homepage .fourth-section p {
+      text-align: center;
+      color: white;
+      font-family: "Open Sans";
+      font-size: 20px;
+      line-height: 20px;
+      /* Text style for "Agencies" */
+      /* Text style for "can come t" */
+      font-weight: 400;
+      margin-bottom: 15px; }
+    body.page-homepage .fourth-section .btn {
+      border: solid 3px #df4f46; }
+    body.page-homepage .fourth-section p:last-child {
+      margin-bottom: 50px; }
+    body.page-homepage .fourth-section p span {
+      font-weight: 700; }
+  body.page-homepage .fifth-section {
+    background-color: white;
+    text-align: center;
+    margin-bottom: 50px; }
+    body.page-homepage .fifth-section h3 {
+      margin-top: 50px;
+      color: black;
+      font-family: "Open Sans";
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 23px; }
+    body.page-homepage .fifth-section .trainees-img {
+      padding-top: 25px;
+      width: 245px;
+      margin: 0 auto; }
+    body.page-homepage .fifth-section .trainees-img .first-img {
+      margin-bottom: 50px; }
+    body.page-homepage .fifth-section .trainees-img .last-img {
+      -ms-flex-line-pack: center;
+      align-content: center;
+      margin: 0 auto; }
+    body.page-homepage .fifth-section .trainees-img .center-img {
+      margin-bottom: 50px; }
+  @media (min-width: 768px) {
+    body.page-homepage .fifth-section .container .trainees-img {
+      padding-top: 75px;
+      width: 100%;
+      margin: 0 auto;
+      padding-bottom: 50px; }
+      body.page-homepage .fifth-section .container .trainees-img .first-img {
+        padding-right: 30px;
+        margin-bottom: 0px; }
+      body.page-homepage .fifth-section .container .trainees-img .last-img {
+        padding-left: 30px;
+        margin-bottom: 0px; }
+      body.page-homepage .fifth-section .container .trainees-img .center-img {
+        padding: 0 30px;
+        margin-bottom: 0px; }
+    body.page-homepage .first-section {
+      margin-top: 70px; }
+      body.page-homepage .first-section .left-background-img {
+        top: auto; }
+      body.page-homepage .first-section .main-text {
+        font-size: 20px;
+        line-height: 25px;
+        padding: 150px 0 50px; } }
+  @media (min-width: 992px) {
+    body.page-homepage .first-section .main-text {
+      font-size: 23px;
+      line-height: 26px;
+      padding: 200px 0 100px; }
+    body.page-homepage .third-section .container {
+      padding-top: 50px;
+      width: 90%;
+      margin: 0 auto; }
+      body.page-homepage .third-section .container .box {
+        min-height: 300px;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: calc(33% - 20px);
+        display: inline-block;
+        vertical-align: bottom;
+        text-align: center; }
+        body.page-homepage .third-section .container .box p {
+          margin-bottom: 25px; }
+    body.page-homepage .fourth-section .container .section-content {
+      padding-top: 50px;
+      width: 100%;
+      margin: 0 auto; }
+      body.page-homepage .fourth-section .container .section-content .text-box {
+        margin-left: 10px;
+        margin-right: 10px;
+        width: calc(33% - 20px);
+        display: inline-block;
+        vertical-align: top; }
+        body.page-homepage .fourth-section .container .section-content .text-box p {
+          line-height: 25px; }
+    body.page-homepage .fifth-section .container .trainees-img {
+      padding-top: 75px;
+      width: 100%;
+      margin: 0 auto;
+      padding-bottom: 50px; }
+      body.page-homepage .fifth-section .container .trainees-img .first-img {
+        padding-right: 40px;
+        margin-bottom: 0px; }
+      body.page-homepage .fifth-section .container .trainees-img .last-img {
+        padding-left: 40px;
+        margin-bottom: 0px; }
+      body.page-homepage .fifth-section .container .trainees-img .center-img {
+        padding: 0 40px;
+        margin-bottom: 0px; } }
+  @media (min-width: 1200px) {
+    body.page-homepage .first-section .main-text {
+      padding: 250px 0 125px; }
+    body.page-homepage .fifth-section .container .trainees-img {
+      padding-top: 75px;
+      width: 100%;
+      margin: 0 auto;
+      padding-bottom: 50px; }
+      body.page-homepage .fifth-section .container .trainees-img .first-img {
+        padding-right: 50px;
+        margin-bottom: 0px; }
+      body.page-homepage .fifth-section .container .trainees-img .last-img {
+        padding-left: 50px;
+        margin-bottom: 0px; }
+      body.page-homepage .fifth-section .container .trainees-img .center-img {
+        padding: 0 50px;
+        margin-bottom: 0px; } }
 
-/* Medium Devices, Desktops */
-@media (min-width: 992px) {
-  header .full-screen-nav li {
-    padding: 0 20px; }
-  header .full-screen-nav img {
-    padding-left: 60px;
-    padding-right: 60px; } }
+body.page-courses {
+  /* Small Devices, Tablets */
+  /* Small Devices, Tablets */
+  /* Medium Devices, Desktops */
+  /* Large Devices, Wide Screens */
+  /* Large Devices, Wide Screens */
+  /* Large Devices, Wide Screens */ }
+  body.page-courses .courses-section-heading {
+    background-image: url(../images/courses-background.png);
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    z-index: -1; }
+    body.page-courses .courses-section-heading .heading h1 {
+      text-align: center;
+      color: white;
+      font-family: "Open Sans";
+      font-size: 40px;
+      font-weight: 300;
+      line-height: 40px;
+      position: relative;
+      padding-top: 100px;
+      padding-bottom: 100px; }
+  body.page-courses .courses-section-about {
+    background-color: #5d5e5e; }
+    body.page-courses .courses-section-about .container h1 {
+      margin-top: 25px;
+      text-align: center;
+      color: white;
+      font-family: "Open Sans";
+      font-size: 23px;
+      font-weight: 400;
+      line-height: 26px; }
+    body.page-courses .courses-section-about .container .line {
+      margin: 0 auto;
+      width: 100px;
+      height: 2px;
+      border: 2px solid #db3a2c;
+      margin-bottom: 50px; }
+    body.page-courses .courses-section-about .container .box {
+      margin: 0 auto;
+      width: 90%;
+      padding-bottom: 50px;
+      text-align: center; }
+      body.page-courses .courses-section-about .container .box h3 {
+        color: white;
+        font-family: "Open Sans";
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 23px; }
+      body.page-courses .courses-section-about .container .box p {
+        color: white;
+        font-family: "Open Sans";
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 18px; }
+  body.page-courses .courses-section-list {
+    background-color: #5d5e5e;
+    background-image: url(../images/red-ltr-background.png);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: cover; }
+    body.page-courses .courses-section-list .container .lists {
+      max-width: 500px;
+      margin: 0 auto; }
+      body.page-courses .courses-section-list .container .lists ul {
+        padding-left: 0px;
+        list-style-type: none;
+        padding-bottom: 50px; }
+        body.page-courses .courses-section-list .container .lists ul li {
+          text-align: center;
+          background-color: #fff;
+          min-height: 40px; }
+          body.page-courses .courses-section-list .container .lists ul li:nth-child(odd) {
+            background-color: #d8d8d8; }
+            body.page-courses .courses-section-list .container .lists ul li:nth-child(odd):first-child {
+              padding-top: 25px;
+              padding-bottom: 15px;
+              text-align: center;
+              color: white;
+              font-family: "Open Sans";
+              font-weight: 400;
+              font-size: 20px;
+              line-height: 23px;
+              border-top: solid 5px #db3a2c;
+              background-color: #686969; }
+  body.page-courses .courses-section-middle-banner {
+    background-color: #d8d8d8; }
+    body.page-courses .courses-section-middle-banner .container {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      text-align: center; }
+      body.page-courses .courses-section-middle-banner .container p {
+        color: black;
+        font-family: "Open Sans";
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 23px;
+        margin-bottom: 15px; }
+  body.page-courses .courses-section-book {
+    background-color: #535353; }
+    body.page-courses .courses-section-book h1 {
+      margin-top: 0;
+      padding-top: 25px;
+      color: white;
+      font-family: "Open Sans";
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 28px;
+      text-align: center; }
+    body.page-courses .courses-section-book .line {
+      margin: 0 auto;
+      width: 100px;
+      height: 2px;
+      border: 2px solid #db3a2c;
+      margin-bottom: 50px; }
+    body.page-courses .courses-section-book .calendar-section {
+      text-align: center; }
+      body.page-courses .courses-section-book .calendar-section h3 {
+        color: white;
+        font-family: "Open Sans";
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        padding-bottom: 15px; }
+    body.page-courses .courses-section-book .bookingform-section {
+      width: 300px;
+      color: white;
+      margin: 0 auto;
+      margin-top: 25px;
+      color: white; }
+      body.page-courses .courses-section-book .bookingform-section label {
+        text-align: left;
+        margin-bottom: 2px; }
+      body.page-courses .courses-section-book .bookingform-section input {
+        width: 300px;
+        height: 30px;
+        border: solid 3px white;
+        background-color: #535353;
+        margin-bottom: 10px; }
+        body.page-courses .courses-section-book .bookingform-section input:focus {
+          outline: solid 3px white; }
+      body.page-courses .courses-section-book .bookingform-section .course-lvl {
+        font-size: 0;
+        margin-top: 10px;
+        margin-bottom: 10px; }
+        body.page-courses .courses-section-book .bookingform-section .course-lvl label {
+          display: inline-block;
+          cursor: pointer;
+          position: relative;
+          padding: 5px 10px;
+          border: solid 1px white;
+          font-family: "Open Sans";
+          font-size: 15px;
+          font-weight: 500;
+          line-height: 18px; }
+        body.page-courses .courses-section-book .bookingform-section .course-lvl input[type=radio] {
+          display: none; }
+        body.page-courses .courses-section-book .bookingform-section .course-lvl input[type=radio]:checked + label {
+          color: grey;
+          background-color: white; }
+      body.page-courses .courses-section-book .bookingform-section .team-size {
+        font-size: 0;
+        margin-top: 10px;
+        margin-bottom: 10px; }
+        body.page-courses .courses-section-book .bookingform-section .team-size label {
+          display: inline-block;
+          cursor: pointer;
+          position: relative;
+          padding: 5px 10px;
+          border: solid 1px white;
+          font-family: "Open Sans";
+          font-size: 15px;
+          font-weight: 500;
+          line-height: 18px; }
+        body.page-courses .courses-section-book .bookingform-section .team-size input[type=radio] {
+          display: none; }
+        body.page-courses .courses-section-book .bookingform-section .team-size input[type=radio]:checked + label {
+          color: grey;
+          background-color: white; }
+      body.page-courses .courses-section-book .bookingform-section .btn {
+        padding: 15px 0;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        margin-left: 0px;
+        width: 300px;
+        border: solid 3px #df4f46; }
+  @media (min-width: 600px) {
+    body.page-courses .courses-section-heading .heading h1 {
+      padding-top: 150px;
+      padding-bottom: 125px; } }
+  @media (min-width: 768px) {
+    body.page-courses .courses-section-heading .heading h1 {
+      padding-top: 250px;
+      padding-bottom: 150px; } }
+  @media (min-width: 992px) {
+    body.page-courses .courses-section-heading .heading h1 {
+      padding-top: 300px;
+      padding-bottom: 200px; } }
+  @media (min-width: 1200px) {
+    body.page-courses .courses-section-heading .heading h1 {
+      padding-top: 300px;
+      padding-bottom: 250px; } }
+  @media (min-width: 1500px) {
+    body.page-courses .courses-section-heading .heading h1 {
+      padding-top: 350px;
+      padding-bottom: 250px; } }
+  @media (min-width: 1900px) {
+    body.page-courses .courses-section-heading .heading h1 {
+      padding-top: 400px;
+      padding-bottom: 250px; } }
 
-/* Large Devices, Wide Screens */
-@media (min-width: 1200px) {
-  header .full-screen-nav li {
-    padding: 0 0px; }
-  header .full-screen-nav img {
-    padding-left: 90px;
-    padding-right: 90px; }
-  .second-section {
-    top: -120px;
-    background-position: 0px 0px;
-    padding-top: 477px;
-    padding-bottom: 100px; }
-    .second-section p {
-      padding-top: 300px; } }
+body.page-whoweare {
+  /* Small Devices, Tablets */
+  /* Small Devices, Tablets */
+  /* Medium Devices, Desktops */
+  /* Large Devices, Wide Screens */
+  /* Large Devices, Wide Screens */
+  /* Large Devices, Wide Screens */ }
+  body.page-whoweare .whoweare-section-heading {
+    background-image: url(../images/whoweare-img.png);
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    z-index: -1; }
+    body.page-whoweare .whoweare-section-heading .heading h1 {
+      text-align: center;
+      color: white;
+      font-family: "Open Sans";
+      font-size: 40px;
+      font-weight: 300;
+      line-height: 40px;
+      position: relative;
+      padding-top: 100px;
+      padding-bottom: 100px; }
+  body.page-whoweare .whoweare-section-main-description {
+    background-color: #db3a2c; }
+    body.page-whoweare .whoweare-section-main-description .container {
+      padding: 50px 0;
+      width: 80%; }
+      body.page-whoweare .whoweare-section-main-description .container h3 {
+        text-align: center;
+        color: white;
+        font-family: "Open Sans";
+        font-size: 20px;
+        line-height: 23px; }
+  body.page-whoweare .whoweare-section-whatwedo {
+    padding: 50px 0;
+    background-color: #535353; }
+  body.page-whoweare .whoweare-section-trainers {
+    margin: 0 auto;
+    padding: 50px 0;
+    background-color: white; }
+    body.page-whoweare .whoweare-section-trainers .container {
+      width: 80%; }
+      body.page-whoweare .whoweare-section-trainers .container .box {
+        margin-bottom: 50px;
+        text-align: center; }
+        body.page-whoweare .whoweare-section-trainers .container .box h1 {
+          font-size: 20px;
+          line-height: 23px;
+          font-weight: bold; }
+        body.page-whoweare .whoweare-section-trainers .container .box p {
+          font-size: 15px;
+          line-height: 18px; }
+          body.page-whoweare .whoweare-section-trainers .container .box p span {
+            font-weight: bold; }
+  @media (min-width: 600px) {
+    body.page-whoweare .whoweare-section-heading .heading h1 {
+      padding-top: 150px;
+      padding-bottom: 125px; } }
+  @media (min-width: 768px) {
+    body.page-whoweare .whoweare-section-heading .heading h1 {
+      padding-top: 250px;
+      padding-bottom: 150px; } }
+  @media (min-width: 992px) {
+    body.page-whoweare .whoweare-section-heading .heading h1 {
+      padding-top: 300px;
+      padding-bottom: 200px; } }
+  @media (min-width: 1200px) {
+    body.page-whoweare .whoweare-section-heading .heading h1 {
+      padding-top: 300px;
+      padding-bottom: 250px; } }
+  @media (min-width: 1500px) {
+    body.page-whoweare .whoweare-section-heading .heading h1 {
+      padding-top: 350px;
+      padding-bottom: 300px; } }
+  @media (min-width: 1900px) {
+    body.page-whoweare .whoweare-section-heading .heading h1 {
+      padding-top: 400px;
+      padding-bottom: 300px; } }
+
+body.page-contact {
+  /* Small Devices, Tablets */
+  /* Small Devices, Tablets */
+  /* Medium Devices, Desktops */
+  /* Large Devices, Wide Screens */ }
+  body.page-contact .contact-section-heading {
+    background-image: url(../images/map.png);
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    z-index: -1; }
+    body.page-contact .contact-section-heading .heading h1 {
+      text-align: center;
+      color: white;
+      font-family: "Open Sans";
+      font-size: 40px;
+      font-weight: 300;
+      line-height: 40px;
+      position: relative;
+      padding-top: 100px;
+      padding-bottom: 100px; }
+  body.page-contact .contact-section-content {
+    margin: 0 auto; }
+    body.page-contact .contact-section-content .container {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      width: 85%; }
+      body.page-contact .contact-section-content .container p {
+        color: black;
+        font-family: "Open Sans";
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 18px; }
+    body.page-contact .contact-section-content .contact-info {
+      margin: 50px 0; }
+      body.page-contact .contact-section-content .contact-info .box {
+        margin: 30px 0;
+        text-align: center; }
+        body.page-contact .contact-section-content .contact-info .box h1 {
+          color: #db3a2c;
+          font-family: "Open Sans";
+          font-size: 17px;
+          font-weight: 400;
+          line-height: 20px; }
+    body.page-contact .contact-section-content .contact-form {
+      margin: 0 auto;
+      width: 300px; }
+      body.page-contact .contact-section-content .contact-form label {
+        color: #db3a2c;
+        font-family: "Open Sans";
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 18px;
+        text-align: left;
+        margin-bottom: 2px; }
+      body.page-contact .contact-section-content .contact-form input {
+        width: 300px;
+        height: 30px;
+        border: solid 3px #db3a2c;
+        background-color: white;
+        margin-bottom: 10px; }
+        body.page-contact .contact-section-content .contact-form input:focus {
+          outline: solid 3px #dd4439; }
+      body.page-contact .contact-section-content .contact-form textarea {
+        width: 300px;
+        border: solid 3px #db3a2c;
+        background-color: white;
+        margin-bottom: 10px; }
+        body.page-contact .contact-section-content .contact-form textarea:focus {
+          outline: solid 3px #dd4439; }
+      body.page-contact .contact-section-content .contact-form .btn {
+        padding: 15px 0;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        margin-left: 0px;
+        width: 300px;
+        border: solid 3px #df4f46; }
+  @media (min-width: 600px) {
+    body.page-contact .contact-section-heading .heading h1 {
+      padding-top: 150px;
+      padding-bottom: 125px; } }
+  @media (min-width: 768px) {
+    body.page-contact .contact-section-heading .heading h1 {
+      padding-top: 250px;
+      padding-bottom: 150px; } }
+  @media (min-width: 992px) {
+    body.page-contact .contact-section-heading .heading h1 {
+      padding-top: 300px;
+      padding-bottom: 200px; } }
+  @media (min-width: 1200px) {
+    body.page-contact .contact-section-heading .heading h1 {
+      padding-top: 250px;
+      padding-bottom: 250px; } }
+
+body.page-faq {
+  /* Small Devices, Tablets */
+  /* Small Devices, Tablets */
+  /* Medium Devices, Desktops */
+  /* Large Devices, Wide Screens */
+  /* Large Devices, Wide Screens */
+  /* Large Devices, Wide Screens */ }
+  body.page-faq .faq-section-heading {
+    background-image: url(../images/courses-background.png);
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    z-index: -1; }
+    body.page-faq .faq-section-heading .heading h1 {
+      text-align: center;
+      color: white;
+      font-family: "Open Sans";
+      font-size: 40px;
+      font-weight: 300;
+      line-height: 40px;
+      position: relative;
+      padding-top: 100px;
+      padding-bottom: 100px; }
+  @media (min-width: 600px) {
+    body.page-faq .faq-section-heading .heading h1 {
+      padding-top: 150px;
+      padding-bottom: 125px; } }
+  @media (min-width: 768px) {
+    body.page-faq .faq-section-heading .heading h1 {
+      padding-top: 250px;
+      padding-bottom: 150px; } }
+  @media (min-width: 992px) {
+    body.page-faq .faq-section-heading .heading h1 {
+      padding-top: 300px;
+      padding-bottom: 200px; } }
+  @media (min-width: 1200px) {
+    body.page-faq .faq-section-heading .heading h1 {
+      padding-top: 300px;
+      padding-bottom: 250px; } }
+  @media (min-width: 1500px) {
+    body.page-faq .faq-section-heading .heading h1 {
+      padding-top: 350px;
+      padding-bottom: 250px; } }
+  @media (min-width: 1900px) {
+    body.page-faq .faq-section-heading .heading h1 {
+      padding-top: 400px;
+      padding-bottom: 250px; } }
 
 /*# sourceMappingURL=app.css.map */

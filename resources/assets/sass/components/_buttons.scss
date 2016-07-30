@@ -1,0 +1,19 @@
+.btn {
+  margin-left: 15px;
+  color: white;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.69px;
+  line-height: 24px;
+  background-color: $button-red;
+  border: $button-red;
+  box-shadow: $button-shadow;
+
+  &:hover
+  {
+    background-color: white;
+    border: solid 3px $button-red;
+    color: $button-red;
+  }
+}

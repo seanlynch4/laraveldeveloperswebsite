@@ -1,0 +1,85 @@
+body.page-faq {
+
+  .faq-section-heading {
+    background-image: url(../images/courses-background.png);
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    z-index: -1;
+
+    .heading h1 {
+      text-align: center;
+      color: white;
+      font-family: "Open Sans";
+      font-size: 40px;
+      font-weight: 300;
+      line-height: 40px;
+      position: relative;
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+  }
+
+
+  /* Small Devices, Tablets */
+  @media (min-width: 600px) {
+    .faq-section-heading {
+      .heading h1 {
+        padding-top: 150px;
+        padding-bottom: 125px;
+      }
+    }
+  }
+
+  /* Small Devices, Tablets */
+  @media (min-width: 768px) {
+    .faq-section-heading {
+      .heading h1 {
+        padding-top: 250px;
+        padding-bottom: 150px;
+      }
+    }
+  }
+
+  /* Medium Devices, Desktops */
+  @media (min-width: 992px) {
+    .faq-section-heading {
+      .heading h1 {
+        padding-top: 300px;
+        padding-bottom: 200px;
+      }
+    }
+  }
+
+  /* Large Devices, Wide Screens */
+  @media (min-width: 1200px) {
+    .faq-section-heading {
+      .heading h1 {
+        padding-top: 300px;
+        padding-bottom: 250px;
+      }
+    }
+  }
+
+  /* Large Devices, Wide Screens */
+  @media (min-width: 1500px) {
+    .faq-section-heading {
+      .heading h1 {
+        padding-top: 350px;
+        padding-bottom: 250px;
+      }
+    }
+  }
+
+  /* Large Devices, Wide Screens */
+  @media (min-width: 1900px) {
+    .faq-section-heading {
+      .heading h1 {
+        padding-top: 400px;
+        padding-bottom: 250px;
+      }
+    }
+  }
+
+}
